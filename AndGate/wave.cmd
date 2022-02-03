@@ -1,0 +1,1 @@
+C:\iverilog\gtkwave\bin\gtkwave.exe andGate_wave_values.vcd

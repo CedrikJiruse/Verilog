@@ -1,0 +1,1 @@
+C:\iverilog\bin\iverilog.exe -o andGate.vvp andGate.v andGate_tb.v

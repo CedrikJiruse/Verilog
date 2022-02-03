@@ -1,0 +1,1 @@
+C:\iverilog\bin\vvp.exe andGate.vvp
