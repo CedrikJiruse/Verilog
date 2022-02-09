@@ -1,0 +1,25 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000265b6a82d00 .scope module, "andGate" "andGate" 2 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+o00000265b6ab6ef8 .functor BUFZ 1, C4<z>; HiZ drive
+o00000265b6ab6f28 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000265b6a83530 .functor AND 1, o00000265b6ab6ef8, o00000265b6ab6f28, C4<1>, C4<1>;
+v00000265b6a837f0_0 .net "a", 0 0, o00000265b6ab6ef8;  0 drivers
+v00000265b6a82e90_0 .net "b", 0 0, o00000265b6ab6f28;  0 drivers
+v00000265b6a82f30_0 .net "c", 0 0, L_00000265b6a83530;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "AndGate.v";
