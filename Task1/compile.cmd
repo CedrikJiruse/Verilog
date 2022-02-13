@@ -1,1 +1,1 @@
-C:\iverilog\bin\iverilog.exe -o andGate.vvp andGate.v andGate_tb.v
+C:\iverilog\bin\iverilog.exe -o ./Task1/andGate.vvp ./Task1/andGate.v ./Task1/andGate_tb.v

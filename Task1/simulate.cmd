@@ -1,1 +1,1 @@
-C:\iverilog\bin\vvp.exe andGate.vvp
+C:\iverilog\bin\vvp.exe ./Task1/andGate.vvp

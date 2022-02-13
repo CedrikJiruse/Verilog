@@ -1,0 +1,1 @@
+C:\iverilog\bin\iverilog.exe -o ./Task2/ff_with_and.vvp ./Task2/ff_with_and.v
