@@ -7,47 +7,47 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_000001ac7457bae0 .scope module, "andGate_tb" "andGate_tb" 2 3;
+S_000002419c4ca760 .scope module, "andGate_tb" "andGate_tb" 2 3;
  .timescale -9 -12;
-v000001ac74579fd0_0 .var "atb", 0 0;
-v000001ac7457a070_0 .var "btb", 0 0;
-v000001ac7457a110_0 .net "ctb", 0 0, L_000001ac7457a7a0;  1 drivers
-S_000001ac7457b020 .scope module, "andGate_inst1" "andGate" 2 7, 3 3 0, S_000001ac7457bae0;
+v000002419c3c88f0_0 .var "atb", 0 0;
+v000002419c3c8990_0 .var "btb", 0 0;
+v000002419c3c8a30_0 .net "ctb", 0 0, L_000002419c4ca290;  1 drivers
+S_000002419c4cb6a0 .scope module, "andGate_inst0" "andGate" 2 7, 3 3 0, S_000002419c4ca760;
  .timescale -9 -12;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "c";
-L_000001ac7457a7a0 .functor AND 1, v000001ac74579fd0_0, v000001ac7457a070_0, C4<1>, C4<1>;
-v000001ac743d3230_0 .net "a", 0 0, v000001ac74579fd0_0;  1 drivers
-v000001ac7457b1b0_0 .net "b", 0 0, v000001ac7457a070_0;  1 drivers
-v000001ac74579f30_0 .net "c", 0 0, L_000001ac7457a7a0;  alias, 1 drivers
-    .scope S_000001ac7457bae0;
+L_000002419c4ca290 .functor AND 1, v000002419c3c88f0_0, v000002419c3c8990_0, C4<1>, C4<1>;
+v000002419c4cb830_0 .net "a", 0 0, v000002419c3c88f0_0;  1 drivers
+v000002419c3c4420_0 .net "b", 0 0, v000002419c3c8990_0;  1 drivers
+v000002419c4c7120_0 .net "c", 0 0, L_000002419c4ca290;  alias, 1 drivers
+    .scope S_000002419c4ca760;
 T_0 ;
     %vpi_call 2 11 "$display", $time, "=============================================" {0 0 0};
     %vpi_call 2 12 "$display", $time, "My name is Cedrik Jiruse - Put your name here" {0 0 0};
     %vpi_call 2 13 "$display", $time, "My ID Number is X00165166" {0 0 0};
     %vpi_call 2 14 "$display", $time, "=============================================" {0 0 0};
-    %vpi_call 2 16 "$dumpfile", "andGate_wave_values.vcd" {0 0 0};
-    %vpi_call 2 17 "$dumpvars", 32'sb11111111111111111111111111111111, S_000001ac7457bae0 {0 0 0};
+    %vpi_call 2 16 "$dumpfile", "./Task1/andGate_wave_values.vcd" {0 0 0};
+    %vpi_call 2 17 "$dumpvars", 32'sb11111111111111111111111111111111, S_000002419c4ca760 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001ac74579fd0_0, 0, 1;
+    %store/vec4 v000002419c3c88f0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001ac7457a070_0, 0, 1;
+    %store/vec4 v000002419c3c8990_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001ac74579fd0_0, 0, 1;
+    %store/vec4 v000002419c3c88f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001ac7457a070_0, 0, 1;
+    %store/vec4 v000002419c3c8990_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001ac74579fd0_0, 0, 1;
+    %store/vec4 v000002419c3c88f0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001ac7457a070_0, 0, 1;
+    %store/vec4 v000002419c3c8990_0, 0, 1;
     %delay 10000, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001ac74579fd0_0, 0, 1;
+    %store/vec4 v000002419c3c88f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001ac7457a070_0, 0, 1;
+    %store/vec4 v000002419c3c8990_0, 0, 1;
     %delay 10000, 0;
     %vpi_call 2 24 "$display", $time, "Simulation is over" {0 0 0};
     %vpi_call 2 26 "$stop" {0 0 0};

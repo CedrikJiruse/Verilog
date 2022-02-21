@@ -5,7 +5,7 @@ module ff_with_and(
                     output op0, op0bar,
                     output [19:0] id_num);
 
-  wire [19:0] id_num = 20'h66165;
+  wire [19:0] id_num = 20'h65166;
   wire d0 = ip0 & ip1;
   wire op0bar = ~op0;
 

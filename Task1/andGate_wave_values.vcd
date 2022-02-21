@@ -1,5 +1,5 @@
 $date
-	Thu Feb 03 17:47:25 2022
+	Thu Feb 17 09:03:17 2022
 $end
 $version
 	Icarus Verilog
@@ -11,7 +11,7 @@ $scope module andGate_tb $end
 $var wire 1 ! ctb $end
 $var reg 1 " atb $end
 $var reg 1 # btb $end
-$scope module andGate_inst1 $end
+$scope module andGate_inst0 $end
 $var wire 1 " a $end
 $var wire 1 # b $end
 $var wire 1 ! c $end
@@ -32,4 +32,3 @@ $end
 #30000
 1!
 1#
-#40000

@@ -1,0 +1,1 @@
+C:\iverilog\gtkwave\bin\gtkwave.exe ./Task2/ff_with_and_wave_values.vcd

@@ -1,0 +1,28 @@
+[*]
+[*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
+[*] Thu Feb 17 17:16:52 2022
+[*]
+[dumpfile] "C:\Users\STEALTHY-BOI\Documents\git\Verilog\Task2\Task2\ff_with_and_wave_values.vcd"
+[savefile] "C:\Users\STEALTHY-BOI\Documents\git\Verilog\Task2\wave.gtkw"
+[timestart] 0
+[size] 1920 983
+[pos] -251 -248
+*-16.754692 110500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ff_with_and_tb.
+[sst_width] 288
+[signals_width] 205
+[sst_expanded] 1
+[sst_vpaned_height] 288
+@22
+ff_with_and_tb.ff_with_and_inst0.id_num[19:0]
+@28
+ff_with_and_tb.ff_with_and_inst0.clk
+ff_with_and_tb.ff_with_and_inst0.preset0
+ff_with_and_tb.ff_with_and_inst0.clear0
+ff_with_and_tb.ff_with_and_inst0.ip0
+ff_with_and_tb.ff_with_and_inst0.ip1
+ff_with_and_tb.ff_with_and_inst0.d0
+ff_with_and_tb.ff_with_and_inst0.op0
+ff_with_and_tb.ff_with_and_inst0.op0bar
+[pattern_trace] 1
+[pattern_trace] 0
