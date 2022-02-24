@@ -25,14 +25,12 @@ module ff_with_and(
   end
 endmodule
 
-`timescale 1ns/1ps
-
 module ff_with_and_tb();
   reg clktb, clear0tb, preset0tb, ip0tb, ip1tb;
   wire op0tb, op0bartb;
   wire [19:0] id_numtb;
 
-  ff_with_and ff_with_and_inst0(clktb,
+  ff_with_and ff_with_and_inst1(clktb,
                                 clear0tb,
                                 preset0tb,
                                 ip0tb,
@@ -54,7 +52,7 @@ module ff_with_and_tb();
     $display($time, "My ID Number is X00165166");
     $display($time, "=========================");
 
-    $dumpfile("ff_with_and_wave_values.vcd");
+    $dumpfile("./ff_with_and_wave_values.vcd");
     $dumpvars(-1, ff_with_and_tb);
 
     // run to the end of the simulation
@@ -67,7 +65,7 @@ module ff_with_and_tb();
     @(posedge clktb); // start of tick7
     @(posedge clktb); // start of tick8
     @(posedge clktb); // start of tick9
-
+    
     $display($time, "..");
     $display($time, ".Simulation finishing.");
     $display($time, "..");
