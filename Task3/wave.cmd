@@ -1,0 +1,1 @@
+C:\iverilog\gtkwave\bin\gtkwave.exe task_3_wave_values.vcd
