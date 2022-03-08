@@ -2,7 +2,7 @@
 
 module ff_with_and_tb();
   reg clktb, clear0tb, preset0tb, ip0tb, ip1tb;
-  wire op0tb, op0bartb;
+  wire op0tb;
   wire [19:0] id_numtb;
 
   ff_with_and ff_with_and_inst0(clktb,
@@ -27,7 +27,7 @@ module ff_with_and_tb();
     $display($time, "My ID Number is X00165166");
     $display($time, "=========================");
 
-    $dumpfile("./Task2/ff_with_and_wave_values.vcd");
+    $dumpfile("ff_with_and_wave_values.vcd");
     $dumpvars(-1, ff_with_and_tb);
 
     // run to the end of the simulation

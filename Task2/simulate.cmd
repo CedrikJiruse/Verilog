@@ -1,1 +1,1 @@
-C:\iverilog\bin\vvp.exe ./Task2/ff_with_and.vvp
+C:\iverilog\bin\vvp.exe ff_with_and.vvp
