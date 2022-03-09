@@ -63,7 +63,7 @@ module task_3_tb();
     $display($time, "My ID Number is X00165166");
     $display($time, "=========================");
 
-    $dumpfile("task_3_wave_values.vcd");
+    $dumpfile("Jiruse_Cedrik_X00165166_wave_values.vcd");
     $dumpvars(-1, task_3_tb);
 
     $display($time, "..");
