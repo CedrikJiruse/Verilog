@@ -1,34 +1,37 @@
 [*]
 [*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
-[*] Thu Feb 24 17:33:30 2022
+[*] Thu Mar 10 17:02:53 2022
 [*]
-[dumpfile] "C:\Users\STEALTHY-BOI\Documents\git\Verilog\Task3\task_3_wave_values.vcd"
-[dumpfile_mtime] "Thu Feb 24 17:29:47 2022"
-[dumpfile_size] 1675
+[dumpfile] "C:\Users\STEALTHY-BOI\Documents\git\Verilog\Task3\Jiruse_Cedrik_X00165166_wave_values.vcd"
+[dumpfile_mtime] "Thu Mar 10 17:00:42 2022"
+[dumpfile_size] 1780
 [savefile] "C:\Users\STEALTHY-BOI\Documents\git\Verilog\Task3\waveform.gtkw"
 [timestart] 0
 [size] 1920 983
 [pos] -59 -56
-*-16.820581 148700 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.765659 34200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] task_3_tb.
 [sst_width] 288
-[signals_width] 215
+[signals_width] 170
 [sst_expanded] 1
 [sst_vpaned_height] 288
 @24
-task_3_tb.task_3_inst0.id_num[19:0]
+task_3_tb.id_numtb[19:0]
 @28
-task_3_tb.task_3_inst0.clk
-task_3_tb.task_3_inst0.preset0
-task_3_tb.task_3_inst0.clear0
-task_3_tb.task_3_inst0.ip0
-task_3_tb.task_3_inst0.ip1
+task_3_tb.clktb
+task_3_tb.preset0tb
+task_3_tb.clear0tb
+task_3_tb.ip0tb
+task_3_tb.ip1tb
 task_3_tb.task_3_inst0.d0
-task_3_tb.task_3_inst0.ip2
-task_3_tb.task_3_inst0.ip3
+task_3_tb.ip2tb
+task_3_tb.ip3tb
 task_3_tb.task_3_inst0.d1
-task_3_tb.task_3_inst0.op0
-task_3_tb.task_3_inst0.op1
-task_3_tb.task_3_inst0.op2
+task_3_tb.op0tb
+task_3_tb.op0_expected
+task_3_tb.op1tb
+task_3_tb.op1_expected
+task_3_tb.op2tb
+task_3_tb.op2_expected
 [pattern_trace] 1
 [pattern_trace] 0

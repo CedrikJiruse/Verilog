@@ -1,16 +1,14 @@
 `timescale 1ns/1ps
 
 module task_3(input clk, clear0, preset0, ip0, ip1, ip2, ip3,
-              output op0, op0bar, op1, op1bar, op2,
+              output op0, op1, op2,
               output [19:0] id_num);
 
-  wire [19:0] id_num = 20'D65166;
+  wire [19:0] id_num = 20'd65166;
 
   wire d0 = ip0 & ip1;
   wire d1 = ~(ip2 | ip3);
   wire op2 = ~(op0 & op1);
-
-  wire op0bar = ~op0, op1bar = ~op1;
 
   reg op0, op1;
 
@@ -19,8 +17,7 @@ module task_3(input clk, clear0, preset0, ip0, ip1, ip2, ip3,
       op0 <= 1'b0;
       op1 <= 1'b0;
     end
-    else if (preset0 == 1'b0)
-    begin
+    else if (preset0 == 1'b0) begin
       op0 <= 1'b1;
       op1 <= 1'b1;
     end
@@ -33,21 +30,17 @@ endmodule
 
 module task_3_tb();
   reg clktb, clear0tb, preset0tb, ip0tb, ip1tb, ip2tb, ip3tb;
-  wire op0tb, op0bartb, op1tb, op1bartb, op2tb;
+  wire op0tb, op1tb, op2tb;
   wire [19:0] id_numtb;
 
+  reg op0_expected, op1_expected, op2_expected;
+  reg [15:0] errorCount;
+  event testOut1;
+
   task_3 task_3_inst0 (clktb,
-                      clear0tb,
-                      preset0tb,
-                      ip0tb,
-                      ip1tb,
-                      ip2tb,
-                      ip3tb,
-                      op0tb,
-                      op0bartb,
-                      op1tb,
-                      op1bartb,
-                      op2tb,
+                      clear0tb, preset0tb,
+                      ip0tb, ip1tb, ip2tb, ip3tb,
+                      op0tb, op1tb, op2tb,
                       id_numtb);
 
   // clock
@@ -85,21 +78,22 @@ module task_3_tb();
     $finish;
   end
 
+
   // preset0 pin
   initial begin
-    preset0tb = 1'b1; // start of tick1
+      preset0tb = 1'b1; // start of tick1
     @(posedge clktb); // start of tick2
     @(posedge clktb); // start of tick3
     @(posedge clktb); // start of tick4
     @(posedge clktb); // start of tick5
     @(posedge clktb); // start of tick6
     @(posedge clktb); // start of tick7
-    #25 preset0tb = 1'b0;
-    #25 preset0tb = 1'b1;
-    
+      #25 preset0tb = 1'b0;
+      #25 preset0tb = 1'b1;
+
     @(posedge clktb); // start of tick8
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
@@ -107,9 +101,9 @@ module task_3_tb();
 
   // clear0 pin
   initial begin
-    clear0tb = 1'b1; // start of tick1
-    #1 clear0tb = 1'b0;
-    #74 clear0tb = 1'b1;
+      clear0tb = 1'b1; // start of tick1
+      #1 clear0tb = 1'b0;
+      #74 clear0tb = 1'b1;
     @(posedge clktb); // start of tick2
     @(posedge clktb); // start of tick3
     @(posedge clktb); // start of tick4
@@ -117,10 +111,10 @@ module task_3_tb();
     @(posedge clktb); // start of tick6
     @(posedge clktb); // start of tick7
     @(posedge clktb); // start of tick8
-    #25 clear0tb = 1'b0;
-    #25 clear0tb = 1'b1;
+      #25 clear0tb = 1'b0;
+      #25 clear0tb = 1'b1;
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
@@ -128,23 +122,23 @@ module task_3_tb();
 
   // input0 pin
   initial begin
-    ip0tb = 1'b1; // start of tick1
-    #1 ip0tb = 1'b0;
+      ip0tb = 1'b1; // start of tick1
+      #1 ip0tb = 1'b0;
     @(posedge clktb); // start of tick2
-    #10 ip0tb = 1'b1;
+      #10 ip0tb = 1'b1;
     @(posedge clktb); // start of tick3
-    #90 ip0tb = 1'b0;
+      #90 ip0tb = 1'b0;
     @(posedge clktb); // start of tick4
-    #75 ip0tb = 1'b1;
-    #23 ip0tb = 1'b0;
+      #75 ip0tb = 1'b1;
+      #23 ip0tb = 1'b0;
     @(posedge clktb); // start of tick5
     @(posedge clktb); // start of tick6
-    #10 ip0tb = 1'b1;
+      #10 ip0tb = 1'b1;
     @(posedge clktb); // start of tick7
     @(posedge clktb); // start of tick8
-    #10 ip0tb = 1'b0;
+      #10 ip0tb = 1'b0;
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
@@ -152,23 +146,23 @@ module task_3_tb();
 
   // input1 pin
   initial begin
-    ip1tb = 1'b1; #1 // start of tick1
-    ip1tb = 1'b0;
-    #24 ip1tb = 1'b1;
+      ip1tb = 1'b1; #1 // start of tick1
+      ip1tb = 1'b0;
+      #24 ip1tb = 1'b1;
     @(posedge clktb); // start of tick2
     @(posedge clktb); // start of tick3
-    #10 ip1tb = 1'b0;
+      #10 ip1tb = 1'b0;
     @(posedge clktb); // start of tick4
-    #25 ip1tb = 1'b1;
-    #25 ip1tb = 1'b0;
+      #25 ip1tb = 1'b1;
+      #25 ip1tb = 1'b0;
     @(posedge clktb); // start of tick5
-    #25 ip1tb = 1'b1;
+      #25 ip1tb = 1'b1;
     @(posedge clktb); // start of tick6
     @(posedge clktb); // start of tick7
     @(posedge clktb); // start of tick8
-    #50 ip1tb = 1'b0;
+      #50 ip1tb = 1'b0;
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
@@ -176,20 +170,20 @@ module task_3_tb();
 
   // input2 pin
   initial begin
-    ip2tb = 1'b1; #1 // start of tick1
-    ip2tb = 1'b0;
+      ip2tb = 1'b1; #1 // start of tick1
+      ip2tb = 1'b0;
     @(posedge clktb); // start of tick2
-    #10 ip2tb = 1'b1;
+      #10 ip2tb = 1'b1;
     @(posedge clktb); // start of tick3
     @(posedge clktb); // start of tick4
     @(posedge clktb); // start of tick5
     @(posedge clktb); // start of tick6
-    #10 ip2tb = 1'b0;
+      #10 ip2tb = 1'b0;
     @(posedge clktb); // start of tick7
-    #10 ip2tb = 1'b1;
+      #10 ip2tb = 1'b1;
     @(posedge clktb); // start of tick8
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
@@ -197,23 +191,107 @@ module task_3_tb();
 
   // input3 pin
   initial begin
-    ip3tb = 1'b1; #1 // start of tick1
-    ip3tb = 1'b0;
+      ip3tb = 1'b1; #1 // start of tick1
+      ip3tb = 1'b0;
     @(posedge clktb); // start of tick2
-    #10 ip3tb = 1'b1;
+      #10 ip3tb = 1'b1;
     @(posedge clktb); // start of tick3
-    #10 ip3tb = 1'b0;
+      #10 ip3tb = 1'b0;
     @(posedge clktb); // start of tick4
-    #10 ip3tb = 1'b1;
+      #10 ip3tb = 1'b1;
     @(posedge clktb); // start of tick5
-    #10 ip3tb = 1'b0;
+      #10 ip3tb = 1'b0;
     @(posedge clktb); // start of tick6
     @(posedge clktb); // start of tick7
     @(posedge clktb); // start of tick8
     @(posedge clktb); // start of tick9
-    #5
+      #5
 
     $stop;
     $finish;
+  end
+
+  // expected output, self-checking
+  initial begin
+    errorCount = 16'b0;
+
+    // tick1
+      op0_expected = 1'b1; op1_expected = 1'b1; #1
+
+      op0_expected = 1'b0;
+      op1_expected = 1'b0;
+      op2_expected = 1'b1;
+      #50 -> testOut1;
+    @(posedge clktb); // tick2
+      op1_expected = 1'b1;
+      #50 -> testOut1;
+    @(posedge clktb); // tick3
+      op0_expected = 1'b1;
+      op1_expected = 1'b0;
+      #50 -> testOut1;
+    @(posedge clktb); // tick4
+      op0_expected = 1'b0;
+      #50 -> testOut1;
+    @(posedge clktb); // tick5
+      #50 -> testOut1;
+    @(posedge clktb); // tick6
+      #50 -> testOut1;
+    @(posedge clktb); // tick7
+      op0_expected = 1'b1;
+      op1_expected = 1'b1;
+      op2_expected = 1'b0;
+      #50 -> testOut1;
+    @(posedge clktb); // tick8
+      op0_expected = 1'b0;
+      op1_expected = 1'b0;
+      op2_expected = 1'b1;
+      #50 -> testOut1;
+    @(posedge clktb); // tick9
+
+    if (errorCount  == 16'b0) begin
+      $display($time, " .. ");
+      $display($time, " ================ ");
+      $display($time, " All tests passed ");
+      $display($time, " ================ ");
+    end
+    else begin
+      $display($time, " .. ");
+      $display($time, " ======================== ");
+      $display($time, " %d tests failed ", errorCount);
+      $display($time, " ======================== ");
+    end
+
+    $stop;
+    $finish;
+  end
+
+    // self-checking
+  always @(testOut1) begin
+    // op0
+    if (op0tb == op0_expected) begin
+      $display($time, " op0 test passed ");
+    end
+    else begin
+      $display($time, " op0 not test passed ");
+      errorCount = errorCount + 16'b1;
+    end
+
+    // op1
+    if (op1tb == op1_expected) begin
+      $display($time, " op1 test passed ");
+    end
+    else begin
+      $display($time, " op1 not test passed ");
+      errorCount = errorCount + 16'b1;
+    end
+
+    // op2
+    if (op2tb == op2_expected) begin
+      $display($time, " op2 test passed ");
+    end
+    else begin
+      $display($time, " op2 not test passed ");
+      errorCount = errorCount + 16'b1;
+    end
   end
 endmodule
