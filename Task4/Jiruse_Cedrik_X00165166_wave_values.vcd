@@ -1,0 +1,121 @@
+$date
+	Tue Mar 29 23:19:54 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module full_adder_tb $end
+$var event 1 ! testOutputs $end
+$var wire 2 " expected [1:0] $end
+$var wire 1 # Sout_tb $end
+$var wire 1 $ Sout_Exp $end
+$var wire 1 % Cout_tb $end
+$var wire 1 & Cout_Exp $end
+$var reg 1 ' Ain_tb $end
+$var reg 1 ( Bin_tb $end
+$var reg 1 ) Cin_tb $end
+$var reg 4 * errorNumber [3:0] $end
+$var reg 4 + testNum [3:0] $end
+$scope module fa_inst0 $end
+$var wire 1 ' Ain $end
+$var wire 1 ( Bin $end
+$var wire 1 ) Cin $end
+$var wire 1 % Cout $end
+$var wire 1 # Sout $end
+$var wire 20 , id_num [19:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111111010001110 ,
+b0 +
+b0 *
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+b0 "
+1!
+$end
+#1000
+1!
+#2000
+b1 +
+#3000
+1#
+1$
+b1 "
+1)
+#4000
+1!
+#5000
+b10 +
+#6000
+1(
+b1 "
+0)
+#7000
+1!
+#8000
+b11 +
+#9000
+0#
+1%
+1&
+0$
+b10 "
+1)
+#10000
+1!
+#11000
+b100 +
+#12000
+0%
+1#
+0&
+1$
+1'
+0(
+b1 "
+0)
+#13000
+1!
+#14000
+b101 +
+#15000
+1%
+0#
+1&
+0$
+b10 "
+1)
+#16000
+1!
+#17000
+b110 +
+#18000
+0#
+1(
+b10 "
+0)
+#19000
+1!
+#20000
+b111 +
+#21000
+1#
+1$
+b11 "
+1)
+#22000
+1!
+#23000
+b1000 +
+#24000
