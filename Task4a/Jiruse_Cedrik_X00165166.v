@@ -25,7 +25,6 @@ wire Cout_Exp, Sout_Exp;
 wire [1:0] expected;
 
 reg [3:0] testNum = 0, errorNumber = 0;
-reg [19:0] id_num;
 
 event testOutputs;
 

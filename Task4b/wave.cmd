@@ -1,0 +1,1 @@
+C:\iverilog\gtkwave\bin\gtkwave.exe Jiruse_Cedrik_X00165166_wave_values.vcd
