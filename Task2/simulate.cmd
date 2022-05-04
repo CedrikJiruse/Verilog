@@ -1,1 +1,0 @@
-C:\iverilog\bin\vvp.exe ff_with_and.vvp
